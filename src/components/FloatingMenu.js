@@ -9,7 +9,7 @@ const outfit = Outfit({
 export default function FloatingMenu() {
   return (
     <div
-      className={`${outfit.className} fixed bottom-16 right-32 space-y-2 text-right flex flex-col gap-2.5 z-50`}
+      className={`${outfit.className} hidden fixed bottom-16 right-32 space-y-2 text-right sm:flex flex-col gap-8 z-50 text-2xl font-light`}
     >
       <a href="#trabalhos">Trabalhos</a>
       <a href="#sobre">Sobre mim</a>
