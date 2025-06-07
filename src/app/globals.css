@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "crucial";
+  src: url("/fonts/Crucial-Medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "monogram";
+  src: url("/fonts/monogram-extended.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "plastic";
+  src: url("/fonts/PlasticSansFreebie-Outline.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-crucial: "crucial", sans-serif;
+  --font-monogram: "monogram", sans-serif;
+  --font-plastic: "plastic", sans-serif;
+}
