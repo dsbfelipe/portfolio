@@ -12,6 +12,7 @@
   src: url("/fonts/monogram-extended.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  -webkit-text-stroke: 2px black;
 }
 
 @font-face {
