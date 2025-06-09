@@ -11,9 +11,15 @@ export default function FloatingMenu() {
     <div
       className={`${outfit.className} hidden fixed bottom-16 right-32 space-y-2 text-right sm:flex flex-col gap-8 z-50 text-2xl font-light`}
     >
-      <a href="#trabalhos">Trabalhos</a>
-      <a href="#sobre">Sobre mim</a>
-      <a href="#curriculum">Curriculum</a>
+      <div>
+        <a href="#trabalhos">Trabalhos</a>
+      </div>
+      <div>
+        <a href="#sobre">Sobre mim</a>
+      </div>
+      <div>
+        <a href="#curriculum">Curriculum</a>
+      </div>
     </div>
   );
 }

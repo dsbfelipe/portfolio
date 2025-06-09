@@ -1,13 +1,15 @@
 "use client";
 import Image from "next/image";
 import MobileBanner from "@/app/assets/images/mobile-hero-banner.png";
-import PixelArt from "@/app/assets/images/pixel-art.png";
+import DesktopBanner from "@/app/assets/images/desktop-hero-banner.png";
+import PixelArt from "@/app/assets/images/pixel-art-hd.png";
 import EmailIcon from "@/app/assets/svgs/mail-line.svg";
 import LinkedInIcon from "@/app/assets/svgs/linkedin-box-fill.svg";
 import GitHubIcon from "@/app/assets/svgs/github-fill.svg";
 
 const contactButtonsStyle =
   "size-12 flex justify-center items-center shadow-md rounded-full cursor-pointer";
+6;
 
 const boldTextStyle = "font-semibold text-zinc-900";
 
@@ -32,17 +34,37 @@ export default function HeroSection() {
             Estudante de Análise e Desenvolvimento de Sistemas na
             <span className={boldTextStyle}> FATEC Sorocaba</span>
           </p>
-          <p className="text-zinc-400">
+          <p className="text-zinc-400 text-[clamp(1rem,2vw,2rem)]">
             Focado em <span className={boldTextStyle}>JavaScript</span>
           </p>
-          <p className="text-zinc-400">
+          <p className="text-zinc-400 text-[clamp(1rem,2vw,2rem)]">
             Entusiasta de <span className={boldTextStyle}>Design UI/UX</span>
           </p>
         </div>
         <Image src={PixelArt} alt="image" className="bottom-[0] z-20 mt-8" />
         <div className="h-5/8 bg-gradient-to-b from-zinc-100 to-zinc-400 absolute left-[15%] bottom-0 w-px"></div>
       </section>
-      <section></section>
+      <section className="hidden sm:flex bg-gradient-to-b from-zinc-50 to-zinc-200 h-screen relative">
+        <Image src={DesktopBanner} alt="desktop banner" className="absolute" />
+        <Image
+          src={PixelArt}
+          alt="pixel art"
+          className="absolute bottom-0 z-20 w-[45%]"
+        />
+        <div className="w-3/9 ml-[45%] mt-[35%] flex flex-col gap-10">
+          <p className="text-zinc-400 text-[clamp(1rem,2vw,2rem)]">
+            Estudante de Análise e Desenvolvimento de Sistemas na
+            <span className={boldTextStyle}> FATEC Sorocaba</span>
+          </p>
+          <p className="text-zinc-400 text-[clamp(1rem,2vw,2rem)]">
+            Focado em <span className={boldTextStyle}>JavaScript</span>
+          </p>
+          <p className="text-zinc-400 text-[clamp(1rem,2vw,2rem)]">
+            Entusiasta de <span className={boldTextStyle}>Design UI/UX</span>
+          </p>
+        </div>
+        <div className="h-3/7 bg-gradient-to-b from-zinc-100 to-zinc-400 absolute left-[42.15%] bottom-0 w-px"></div>
+      </section>
     </>
   );
 }
