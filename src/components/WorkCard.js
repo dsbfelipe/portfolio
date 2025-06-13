@@ -3,7 +3,7 @@
 import { Prosto_One } from "next/font/google";
 import Image from "next/image";
 import { Outfit, Inter } from "next/font/google";
-import { use, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -14,10 +14,10 @@ const inter = Inter({
 });
 
 const MockupStyle = "aspect-square object-cover";
-const WorkTitleStyle = `${outfit.className} text-zinc-50 text-5xl`;
+const WorkTitleStyle = `font-monogram text-zinc-50 text-7xl`;
 const WorkTechStackStyle = `${inter.className} text-zinc-400 underline`;
 const CardNumberStyle =
-  "text-zinc-50 font-monogram text-7xl self-start leading-none absolute right-4 top-1";
+  "text-zinc-50 font-monogram text-7xl self-start leading-none";
 const WorkDescriptionStyle =
   "text-zinc-300 pr-4 pl-4 pb-4 text-[clamp(1rem,2vw,1.5rem)]";
 
@@ -63,17 +63,25 @@ export default function WorkCard(props) {
     };
   }, []);
 
+  const acessLink = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <>
-      <div ref={cardRef} className="border border-zinc-50 cursor-none">
+      <div
+        ref={cardRef}
+        className="border border-zinc-50 cursor-none flex-1"
+        onClick={() => acessLink(props.link)}
+      >
         <Image
           src={props.image}
           alt={`Mockup do projeto "${props.title}"`}
           className={MockupStyle}
         />
-        <div className=" bg-zinc-950/50 pb-4">
-          <div className="flex flex-row justify-between p-4 pb-2 relative">
-            <div className="flex flex-col gap-2">
+        <div className=" bg-zinc-950/50 pb-4 sm:p-4 sm:pt-1">
+          <div className="flex flex-row justify-between p-4 pb-2 pt-1 sm:pt-4 relative ">
+            <div className="flex flex-col gap-1">
               <h1 className={WorkTitleStyle}>{props.title}</h1>
               <p className={WorkTechStackStyle}>{props.techStack}</p>
             </div>
@@ -84,12 +92,12 @@ export default function WorkCard(props) {
       </div>
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 w-32 h-32 bg-zinc-950/90 text-white rounded-full flex items-center justify-center opacity-0 pointer-events-none z-[9999] transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2"
+        className="hidden sm:flex fixed top-0 left-0 w-40 h-20 bg-zinc-950 text-white items-center justify-center opacity-0 pointer-events-none z-[9999] transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2"
       >
         <p
-          className={`${outfit.className} text-zinc-50 text-base font-light text-center w-2/3`}
+          className={`font-monogram text-zinc-50 text-2xl font-light text-center w-3/5 leading-none`}
         >
-          Ver estudo de caso
+          VER ESTUDO DE CASO &gt;
         </p>
       </div>
     </>

@@ -19,7 +19,11 @@ export default function HeroSection() {
   return (
     <>
       <section className="flex bg-gradient-to-b from-zinc-50 to-zinc-200 w-screen overflow-x-hidden flex-col relative sm:hidden">
-        <Image src={MobileBanner} alt="Image" className="sm:hidden" />
+        <Image
+          src={MobileBanner}
+          alt="dsbfelipe: Desenvolvedor Front-End"
+          className="sm:hidden"
+        />
         <div className="flex flex-row w-screen justify-center gap-10 mt-2">
           <button className={mobileContactButtonsStyle}>
             <Image src={EmailIcon} alt="email icon" />
@@ -48,7 +52,11 @@ export default function HeroSection() {
       </section>
 
       <section className="hidden sm:flex bg-gradient-to-b from-zinc-50 to-zinc-200 h-screen relative flex-col overflow-x-hidden">
-        <Image src={DesktopBanner} alt="desktop banner" className="absolute" />
+        <Image
+          src={DesktopBanner}
+          alt="dsbfelipe: Desenvolvedor Front-End"
+          className="absolute"
+        />
         <Image
           src={PixelArt}
           alt="pixel art"

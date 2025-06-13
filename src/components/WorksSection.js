@@ -2,17 +2,13 @@
 
 import Image from "next/image";
 import WorksHeader from "@/app/assets/images/works-header.png";
-import PorkinMockup from "@/app/assets/images/porkin.png";
+import BooklogdMockup from "@/app/assets/images/booklogd-mockup.png";
+import PokemonMockup from "@/app/assets/images/pokemon-mockup.png";
+import PorkinMockup from "@/app/assets/images/porkin-mockup.png";
 import { Outfit, Inter } from "next/font/google";
 import WorkCard from "./WorkCard";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-});
+import OtherWorksCard from "./OtherWorksCard";
+import { motion } from "framer-motion";
 
 const CardStyle = "";
 
@@ -24,23 +20,65 @@ const works = [
     number: "01",
     description:
       "Aplicação web para controle de gastos compartilhados em eventos",
+    link: "https://github.com/LauriESB/porkin",
+  },
+  {
+    image: BooklogdMockup,
+    title: "Booklogd",
+    techStack: "JavaScript / CSS / HTML",
+    number: "02",
+    description:
+      "Plataforma para catalogar e acompanhar sua leitura de livros.",
+    link: "https://github.com/dsbfelipe/odin-library",
+  },
+  {
+    image: PokemonMockup,
+    title: "Pokédex",
+    techStack: "JavaScript / CSS / HTML",
+    number: "03",
+    description: "Site para buscar e explorar dados de Pokémon.",
+    link: "https://github.com/dsbfelipe/freecodecamp-pokemon-search-app",
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
 export default function WorksSection() {
   return (
-    <>
-      <section
-        className="bg-cover"
-        style={{ backgroundImage: `url(/images/works-background.jpg)` }}
+    <section
+      className="bg-cover"
+      style={{ backgroundImage: `url(/images/works-background.jpg)` }}
+    >
+      <Image src={WorksHeader} alt="Trabalhos" className="mb-4" />
+      <div
+        id="main-works"
+        className="flex flex-col sm:flex-row max-w-screen overflow-hidden"
       >
-        <Image src={WorksHeader} alt="Trabalhos" />
-        <div id="main-works" className="flex flex-col mt-4 sm:flex-row">
-          <WorkCard {...works[0]} />
-          <WorkCard {...works[0]} />
-          <WorkCard {...works[0]} />
-        </div>
-      </section>
-    </>
+        {works.map((work, i) => (
+          <motion.div
+            key={work.title}
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={cardVariants}
+          >
+            <WorkCard {...work} />
+          </motion.div>
+        ))}
+        <div id="other-works"></div>
+      </div>
+    </section>
   );
 }
