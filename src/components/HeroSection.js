@@ -25,13 +25,26 @@ export default function HeroSection() {
           className="sm:hidden"
         />
         <div className="flex flex-row w-screen justify-center gap-10 mt-2">
-          <button className={mobileContactButtonsStyle}>
+          <button
+            className={mobileContactButtonsStyle}
+            onClick={() => window.open("mailto:dsbfelipe@outlook.com")}
+          >
             <Image src={EmailIcon} alt="email icon" />
           </button>
-          <button className={mobileContactButtonsStyle}>
+          <button
+            className={mobileContactButtonsStyle}
+            onClick={() =>
+              window.open("https://github.com/dsbfelipe", "_blank")
+            }
+          >
             <Image src={GitHubIcon} alt="email icon" />
           </button>
-          <button className={mobileContactButtonsStyle}>
+          <button
+            className={mobileContactButtonsStyle}
+            onClick={() =>
+              window.open("https://www.linkedin.com/in/dsbfelipe/", "_blank")
+            }
+          >
             <Image src={LinkedInIcon} alt="email icon" />
           </button>
         </div>
@@ -64,13 +77,26 @@ export default function HeroSection() {
         />
         <div className="flex flex-row-reverse gap-10 w-2/4 justify-between ml-[45%] mt-[17%]">
           <div className="flex flex-row justify-center gap-10 mt-[33%]">
-            <button className={desktopContactButtonsStyle}>
+            <button
+              className={desktopContactButtonsStyle}
+              onClick={() => window.open("mailto:dsbfelipe@outlook.com")}
+            >
               <Image src={EmailIcon} alt="email icon" width={32} height={32} />
             </button>
-            <button className={desktopContactButtonsStyle}>
+            <button
+              className={desktopContactButtonsStyle}
+              onClick={() =>
+                window.open("https://github.com/dsbfelipe", "_blank")
+              }
+            >
               <Image src={GitHubIcon} alt="email icon" width={32} height={32} />
             </button>
-            <button className={desktopContactButtonsStyle}>
+            <button
+              className={desktopContactButtonsStyle}
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/dsbfelipe/", "_blank")
+              }
+            >
               <Image
                 src={LinkedInIcon}
                 alt="email icon"

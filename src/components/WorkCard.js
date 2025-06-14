@@ -63,16 +63,12 @@ export default function WorkCard(props) {
     };
   }, []);
 
-  const acessLink = (link) => {
-    window.open(link, "_blank");
-  };
-
   return (
     <>
       <div
         ref={cardRef}
         className="border border-zinc-50 cursor-none flex-1"
-        onClick={() => acessLink(props.link)}
+        onClick={() => window.open(props.link, "_blank")}
       >
         <Image
           src={props.image}
