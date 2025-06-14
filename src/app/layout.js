@@ -4,7 +4,8 @@ export default function RootLayout({ children }) {
   return (
     <>
       <head>
-        <title>dsbfelipe</title>
+        <title>dsbfelipe - Portfolio</title>
+        <link rel="icon" href="/favicon.png" />
       </head>
       <html>
         <body>{children}</body>
