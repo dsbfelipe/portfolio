@@ -14,7 +14,7 @@ export default function Footer() {
       <section
         className={`${outfit.className} text-lg sm:text-2xl w-full bg-gradient-to-b from-zinc-50 to-zinc-200`}
       >
-        <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-end p-8 underline mt-4 sm:mt-16">
+        <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-end p-8 underline pt-4 sm:pt-16">
           <div className="text-left mb-10">
             <a href="#hero">Voltar pro início</a>
           </div>
