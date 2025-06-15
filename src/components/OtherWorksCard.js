@@ -66,6 +66,7 @@ export default function OtherWorksCard(props) {
         className={`border hidden border-zinc-50 p-8 pb-2 pt-1 sm:pt-4 sm:flex flex-row w-full justify-between cursor-none z-${props.zindex} relative`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={() => window.open(props.link, "_blank")}
       >
         <div>
           <h1 className={WorkTitleStyle}>{props.title}</h1>
@@ -80,7 +81,7 @@ export default function OtherWorksCard(props) {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 100, opacity: 0 }}
               transition={{ duration: 0.3, ease: "circInOut" }}
-              className="absolute right-80 bottom-0 w-128 h-128"
+              className="absolute right-96 bottom-0 w-128 h-128"
               style={{ pointerEvents: "none" }}
             >
               <Image
