@@ -8,7 +8,7 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
-export default function () {
+export default function Footer() {
   return (
     <>
       <section
@@ -19,9 +19,27 @@ export default function () {
             <a href="#hero">Voltar pro início</a>
           </div>
           <div className="flex sm:flex-col justify-between sm:justify-end text-right gap-6">
-            <a href="#hero">Github</a>
-            <a href="#hero">LinkedIn</a>
-            <a href="#hero">Email</a>
+            <a
+              href="https://github.com/dsbfelipe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dsbfelipe/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:dsbfelipe@outlook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Email
+            </a>
           </div>
         </div>
 
