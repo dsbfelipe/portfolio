@@ -17,7 +17,7 @@ const boldTextStyle = "font-semibold text-zinc-900";
 
 export default function HeroSection() {
   return (
-    <>
+    <div id="hero">
       <section className="flex bg-gradient-to-b from-zinc-50 to-zinc-200 w-screen overflow-x-hidden flex-col relative sm:hidden overscroll-contain">
         <Image
           src={MobileBanner}
@@ -121,6 +121,6 @@ export default function HeroSection() {
 
         <div className="h-3/7 bg-gradient-to-b from-zinc-100 to-zinc-400 absolute left-[42.15%] bottom-0 w-px"></div>
       </section>
-    </>
+    </div>
   );
 }

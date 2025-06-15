@@ -27,3 +27,7 @@
   --font-monogram: "monogram", sans-serif;
   --font-plastic: "plastic", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}

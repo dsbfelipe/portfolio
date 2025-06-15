@@ -89,6 +89,7 @@ export default function OtherWorksCard(props) {
                 alt={`Mockup do projeto ${props.title}`}
                 fill
                 className="object-contain"
+                priority
               />
             </motion.div>
           )}

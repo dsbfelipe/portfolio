@@ -74,6 +74,7 @@ export default function WorkCard(props) {
           src={props.image}
           alt={`Mockup do projeto "${props.title}"`}
           className={MockupStyle}
+          priority
         />
         <div className=" bg-zinc-950/50 pb-4 sm:p-4 sm:pt-1">
           <div className="flex flex-row justify-between p-4 pb-2 pt-1 sm:pt-4 relative ">
