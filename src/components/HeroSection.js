@@ -18,7 +18,7 @@ const boldTextStyle = "font-semibold text-zinc-900";
 export default function HeroSection() {
   return (
     <>
-      <section className="flex bg-gradient-to-b from-zinc-50 to-zinc-200 w-screen overflow-x-hidden flex-col relative sm:hidden">
+      <section className="flex bg-gradient-to-b from-zinc-50 to-zinc-200 w-screen overflow-x-hidden flex-col relative sm:hidden overscroll-contain">
         <Image
           src={MobileBanner}
           alt="dsbfelipe: Desenvolvedor Front-End"
@@ -64,7 +64,7 @@ export default function HeroSection() {
         <div className="h-5/8 bg-gradient-to-b from-zinc-100 to-zinc-400 absolute left-[15%] bottom-0 w-px"></div>
       </section>
 
-      <section className="hidden sm:flex bg-gradient-to-b from-zinc-50 to-zinc-200 h-screen relative flex-col overflow-x-hidden">
+      <section className="hidden sm:flex bg-gradient-to-b from-zinc-50 to-zinc-200 h-screen relative flex-col overflow-x-hidden overscroll-contain">
         <Image
           src={DesktopBanner}
           alt="dsbfelipe: Desenvolvedor Front-End"

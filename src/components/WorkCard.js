@@ -88,7 +88,7 @@ export default function WorkCard(props) {
       </div>
       <div
         ref={cursorRef}
-        className="hidden sm:flex fixed top-0 left-0 w-40 h-20 bg-zinc-950 text-white items-center justify-center opacity-0 pointer-events-none z-[9999] transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2"
+        className="hidden shadow-md sm:flex fixed top-0 left-0 w-40 h-20 bg-zinc-950 text-white items-center justify-center opacity-0 pointer-events-none z-[9999] transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2"
       >
         <p
           className={`font-monogram text-zinc-50 text-2xl font-light text-center w-3/5 leading-none`}

@@ -5,6 +5,8 @@ import WorksHeader from "@/app/assets/images/works-header.png";
 import BooklogdMockup from "@/app/assets/images/booklogd-mockup.png";
 import PokemonMockup from "@/app/assets/images/pokemon-mockup.png";
 import PorkinMockup from "@/app/assets/images/porkin-mockup.png";
+import BurgBugMockup from "@/app/assets/images/burgbug-mockup.png";
+import CalculatorMockup from "@/app/assets/images/calculator-mockup.png";
 import { Outfit, Inter } from "next/font/google";
 import WorkCard from "./WorkCard";
 import OtherWorksCard from "./OtherWorksCard";
@@ -41,6 +43,27 @@ const works = [
   },
 ];
 
+const otherWorks = [
+  {
+    image: BurgBugMockup,
+    title: "BURBUG",
+    techStack: "JavaScript / CSS / HTML / Webpack",
+    number: "04",
+    description: "Cardápio digital com opções de hambúrgueres e combos.",
+    link: "https://github.com/dsbfelipe/odin-restaurant-page",
+    zindex: "60",
+  },
+  {
+    image: CalculatorMockup,
+    title: "Calculadora",
+    techStack: "JavaScript / CSS / HTML",
+    number: "05",
+    description: "Calculadora online para operações matemáticas básicas.",
+    link: "https://github.com/dsbfelipe/odin-calculator",
+    zindex: "61",
+  },
+];
+
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i) => ({
@@ -57,6 +80,7 @@ const cardVariants = {
 export default function WorksSection() {
   return (
     <section
+      id="trabalhos"
       className="bg-cover"
       style={{ backgroundImage: `url(/images/works-background.jpg)` }}
     >
@@ -77,7 +101,10 @@ export default function WorksSection() {
             <WorkCard {...work} />
           </motion.div>
         ))}
-        <div id="other-works"></div>
+      </div>
+      <div id="other-works">
+        <OtherWorksCard {...otherWorks[0]} />
+        <OtherWorksCard {...otherWorks[1]} />
       </div>
     </section>
   );
