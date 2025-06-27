@@ -19,7 +19,7 @@ const WorkTechStackStyle = `${inter.className} text-zinc-400 underline`;
 const CardNumberStyle =
   "text-zinc-50 font-monogram text-7xl self-start leading-none";
 const WorkDescriptionStyle =
-  "text-zinc-300 pr-4 pl-4 pb-4 text-[clamp(1rem,2vw,1.5rem)]";
+  "text-zinc-300 pr-4 min-h-[88px] pl-4 pb-4 text-[clamp(1rem,2vw,1.5rem)]";
 
 export default function WorkCard(props) {
   const cursorRef = useRef(null);
